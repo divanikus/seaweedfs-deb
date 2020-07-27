@@ -1,0 +1,16 @@
+[Unit]
+Description="Seaweedfs #%i daemon"
+Documentation=https://github.com/chrislusf/seaweedfs/wiki
+
+[Service]
+Restart=always
+User=weed
+EnvironmentFile=/etc/default/weed-%i
+ExecStart=/usr/bin/weed $ARGS
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutStopSec=20s
+SendSIGKILL=no
+LimitNOFILE=8192
+
+[Install]
+WantedBy=multi-user.target
