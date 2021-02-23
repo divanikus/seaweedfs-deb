@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME=seaweedfs
-VERSION=2.26
+VERSION=2.28
 
 curl -OL https://github.com/chrislusf/seaweedfs/releases/download/$VERSION/linux_amd64.tar.gz
 tar -zxvf linux_amd64.tar.gz
